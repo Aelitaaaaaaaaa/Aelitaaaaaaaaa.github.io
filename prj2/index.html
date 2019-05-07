@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SNAKE</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet"> 
+</head>
+<body>
+	<header class="header">
+		<h1 class="title">SNAKE</h1>
+		<a href="#main" class="btn"></a>
+	</header>
+
+	<main class="main" id='main'>
+		<h2 class="subtitle">Gallereeea</h2>
+		<div class="box">
+			<a href="p3.html" class="item" style="background-image: url(123.jpg)"></a>
+			<a href="p4.html" class="item" style="background-image: url(2.jpg)"></a>
+			<a href="p5.html" class="item" style="background-image: url(3.jpg)"></a>
+			<a href="p6.html" class="item" style="background-image: url(4.jpg)"></a>
+			<a href="p7.html" class="item" style="background-image: url(5.jpg)"></a>
+			<a href="p8.html" class="item" style="background-image: url(6.jpg)"></a>
+			<a href="p9.html" class="item" style="background-image: url(7.jpg)"></a>
+			<a href="p10.html" class="item" style="background-image: url(8.jpg)"></a>
+			<a href="p11.html" class="item" style="background-image: url(9.jpg)"></a>
+			<a href="p12.html" class="item" style="background-image: url(10.jpg)"></a>
+			<a href="p13.html" class="item" style="background-image: url(11.jpg)"></a>
+			<a href="p14.html" class="item" style="background-image: url(12.jpg)"></a>
+			<a href="p15.html" class="item" style="background-image: url(13.jpg)"></a>
+			<a href="p2.html" class="item" style="background-image: url(14.jpg)"></a>
+			<a href="p16.html" class="item" style="background-image: url(15.jpg)"></a>
+			<a href="p17.html" class="item" style="background-image: url(16.jpg)"></a>
+			<a href="p18.html" class="item" style="background-image: url(21.jpg)"></a>
+			<a href="p19.html" class="item" style="background-image: url(18.jpg)"></a>
+			<a class="item" style="background-image: url(19.jpg)" href="p1.html"></a>
+			<a href="p20.html" class="item" style="background-image: url(20.jpg)"></a>
+		</div>
+	</main>	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<script>
+		$(document).ready(function() {
+			$('.btn').on('click touchstart',function() {
+				var e = $(this).attr('href');
+				$('html, body').animate({scrollTop: $(e).offset().top}, 500);
+				return false;
+			})
+		})
+	</script>
+</body>
+</html>
