@@ -1,0 +1,88 @@
+html,body {
+	margin: 0;
+	height: 100%;
+	font-family: 'Permanent Marker', cursive;
+}
+
+.header {
+	height: 100%;
+	background-image: url(345.png);
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	position: relative;
+	/*z-index: -1;*/
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.header:after {
+	content: '';
+	width: 100%;
+	height: 100%;
+	top: 0;
+	position: absolute;
+	background-color: rgba(0,0,0,0.3);
+	z-index: 0;
+}
+
+.title {
+	font-size: 12vmin;
+	z-index: 1;
+	text-shadow: 3px 3px 3px rgba(0,0,0,0.3);
+}
+
+.main {
+	padding: 50px;
+	margin: auto;
+	max-width: 70%;
+	height: 100%;
+}
+
+.subtitle {
+	font-size: 5vmin;
+}
+
+.box {
+	display: -webkit-flex;
+	-webkit-flex-wrap: wrap;
+	-moz-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.item {
+	height: 200px;
+	background-color: green;
+	flex-basis: 23%;
+	margin: 2.5%;
+	background-position: center;
+	-webkit-background-size: cover;
+	background-size: cover;
+	transition: 0.3s;
+	box-shadow: 2px 4px 8px 1px rgba(0,0,0,0.2);
+
+}
+
+.item:hover {
+	transform: scale(1.1) rotate(45deg);
+
+}
+
+.btn {
+	height: 2px;
+	width: 2px;
+	background-color: green;
+	z-index: 1;
+	position: absolute;
+	top:70%;
+}
