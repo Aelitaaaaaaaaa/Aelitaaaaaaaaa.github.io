@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MAGASIN AELITA</title>
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik+Mono+One&display=swap" rel="stylesheet"> 
+</head>
+<body>
+	<div class="grid">
+		<div class="header"></div>
+		<div class="sidebar">
+			<a href="#" class="link">Теннесисты</a>
+			<a href="#" class="link">Пловцы</a>
+			<a href="#" class="link">Уточки</a>
+			<a href="#" class="link">Трубачи</a>
+			<a href="#" class="link">Женьщины</a>
+			<a href="#" class="link">Злобные старушки</a>
+		</div>
+		<div class="box">
+			<a href="#" id="item1" class="item" style="background-image: url(1.jpg); background-position: left top; border-top: 0;">
+				<p class="text">теннисист</p>
+			</a>
+			<a href="#" id="item2"  class="item" style="background-image: url(2.jpg); border-top: 0; border-right: 0;">
+				<p class="text">пловец</p>
+			</a>
+			<div class="break"></div>
+			<a href="#" id ="item3" class="item" style="background-image: url(4.jpg); border-right: 0;">
+				<p class="text">уточка</p>
+			</a>
+			<div class="break"></div>
+			<a href="#" id="item4"  class="item" style="background-image: url(5.jpg); border-bottom: 0;">
+				<p class="text">трубач</p>
+			</a>
+			<a href="#" id="item5" class="item" style="background-image: url(3.jpg); border-bottom: 0;">
+				<p class="text">женьшина</p>
+			</a>
+			<a href="#" id="item6" class="item" style="background-image: url(6.jpg); border-bottom: 0; border-right: 0;">
+				<p class="text">злая бабка</p>
+			</a>
+
+			<div class="pop" id="pop1"></div>
+			<div class="pop" id="pop2"></div>
+			<div class="pop" id="pop3"></div>
+			<div class="pop" id="pop4"></div>
+			<div class="pop" id="pop5"></div>
+			<div class="pop" id="pop6"></div>
+		</div>
+		<div class="footer"></div>
+		<div id="black"></div>
+	</div>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function() {
+		$('body').append('<div id="black"></div>');
+
+		function center() {
+			var winW = $(window).width();
+			var winH = $(window).height();
+			var boxH = winH/2;
+			var boxW = winW/2;
+			var scroll = $(window).scrollTop();
+			var disW = (winW - boxW)/2;
+			var disH = scroll + 150;
+			$('.pop').css({'width' : boxW+'px', 'height' : boxH+'px', 'left' : disW+'px', 'top' : disH+'px'});
+			$('#black').css({'width' : winW+'px', 'height' : winH+'px', 'top' : scroll+'px'});
+			return false;
+		}
+
+		$(window).resize(center);
+
+		$('[id^=item]').click(function(e) {
+	        e.preventDefault();
+	        e.stopPropagation();
+	         
+	        var name = $(this).attr('id');
+	        var id = name[name.length - 1];
+	        var scrollPos = $(window).scrollTop();
+	         
+	        $('#pop'+id).show();
+	        $('#black').show();
+	        $('html,body').css('overflow', 'hidden');
+	         
+	        $('html').scrollTop(scrollPos);
+	        center();
+	    });
+	     
+	    $('[class*=pop]').click(function(e) { 
+	        e.stopPropagation(); 
+	    });
+	    $('html').click(function() { 
+	        var scrollPos = $(window).scrollTop();
+
+	        $('[id^=pop]').hide(); 
+	        $('#black').hide(); 
+	        $("html,body").css("overflow","auto");
+	        $('html').scrollTop(scrollPos);
+	    });
+	})
+</script>
+</body>
+</html>
