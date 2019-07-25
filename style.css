@@ -27,7 +27,7 @@
 	margin: 40px; 
 	font-size: 7vmin;
 	transition: 0.2s;
-	wight: calc(100% / 2 - 160px);
+	width: calc(100% / 2 - 160px);
 } 
 
 .link:hover {
