@@ -1,0 +1,20 @@
+body {
+	margin: 0;
+}
+
+.box {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	justify-content: center;
+	-ms-align-items: center;
+	align-items: center;
+	height: 100vh;
+}
+
+.changer {
+	padding: 10px 50px;
+	font-size: 20px;
+}

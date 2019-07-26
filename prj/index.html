@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>change color</title>
+	<link rel="stylesheet" href="Katusha.css">
+</head>
+<body>
+	<div class="box">
+		<button class="changer">0</button>
+	</div>
+	
+	<script>
+		const btn = document.querySelector(".changer");
+		let count = 0;
+		function update() {
+			count++;
+			if (count % 10 == 0) {
+				document.body.style.backgroundColor = '#f4ff61';
+				this.textContent = '#f4ff61';
+			}
+			else if (count % 10 == 1) {
+				document.body.style.backgroundColor = '#a8ff3e';
+				this.textContent = '#a8ff3e';
+			}
+			else if (count % 10 == 2) {
+				document.body.style.backgroundColor = '#32ff6a';
+				this.textContent = '#32ff6a';
+			}
+			else if (count % 10 == 3) {
+				document.body.style.backgroundColor = '#27aa80';
+				this.textContent = '#27aa80';
+			}
+			else if (count % 10 == 4) {
+				document.body.style.backgroundColor = '#96f7d2';
+				this.textContent = '#96f7d2';
+			}
+			else if (count % 10 == 5) {
+				document.body.style.backgroundColor = '#f0f696';
+				this.textContent = '#f0f696';
+			}
+			else if (count % 10 == 6) {
+				document.body.style.backgroundColor = '#fcb1b1';
+				this.textContent = '#fcb1b1';
+			}
+			else if (count % 10 == 7) {
+				document.body.style.backgroundColor = '#f5b5fc';
+				this.textContent = '#f5b5fc';
+			}
+			else if (count % 10 == 8) {
+				document.body.style.backgroundColor = '#caa5f1';
+				this.textContent = '#caa5f1';
+			}
+			else {
+				document.body.style.backgroundColor = '#59d4e8';
+				this.textContent = '#59d4e8';
+			}
+		}
+		btn.onclick = update;	
+	</script>
+</body>
+</html>
