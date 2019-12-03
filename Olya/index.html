@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Выздоравлива</title>
+	<style>
+		body {
+			display: -webkit-flex;
+			display: -moz-flex;
+			display: -ms-flex;
+			display: -o-flex;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 100vh;
+		}
+
+		.btn {
+			padding: 20px 50px;
+
+		}
+
+	</style>
+</head>
+<body>
+	<button class="btn">Push me</button>
+	<script>
+		const btn = document.querySelector('.btn');
+		let massive = new Array();
+		let color = new Array();
+		color = ['#dff6f0','#ffa259','#9b45e4','#a3f7bf','#51eaea','#ff9d76','#9dd8c8','#c3f0ca','#eef5b2','#ffdc34','#4dd599','#fffdf9','#d597ce','#851de0','#c355f5','#f1fa3c','#df42d1','#9852f9','#c6cbef','#f0134d','#fc7fb2','#edb5f5','#b1e8ed','#ffcccc','#ffbbcc','#ffcccc','#ffeecc'];
+		massive = ['Люблю','Выздоравливай','Попровляйся','Удачи','Как дела?','Обожаю','Без тебя очень скучно','Скучаю','Надеюсь ты скоро выздоровишь','И будь уверена, что все самые тяжолые сумки я буду нести я','Оля Оля','Как дела?','Лечись','Ждем тебя укрошать ёлку','НЕ БОЛЕЙ!','ТЫ ХОРОШЫЙ ЧЕЛОВЕК','Такая хорошая (ты)','И не думай болеть!!!!','.','Ждем',':)','Не грусти',';)!','Отдыхай','Точно все хорошо?','Уверена что  всё нормально?',')))'];
+		function update() {
+			random = Math.floor( Math.random() * massive.length );
+			this.textContent = massive[random];
+			console.log(massive[random]);
+			document.body.style.backgroundColor = color[random];
+			btn.style.backgroundColor = color[random];
+		}
+
+		btn.onclick = update;
+
+	</script>
+</body>
+</html>
